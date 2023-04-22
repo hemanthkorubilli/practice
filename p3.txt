@@ -1,7 +1,8 @@
 import java.util.*;
 public class git3{
     public static int fungit(int a){
-        int b,temp,c=0,count=0,sum=0,var;
+        int b,temp,c=0,count=0,var;
+        double sum=0;
         int ref=a;
         temp=a;
         while(a>0){
@@ -10,10 +11,11 @@ public class git3{
             count++;
             a=a/10;
         }
+        int count1=count;
         if(c==temp){
             while(ref>0){
                 var=ref%10;
-                sum=(var*count)+sum;
+                sum=Math.pow(var,count)+sum;
                 ref=ref/10;
             }
             System.out.print(sum);    
